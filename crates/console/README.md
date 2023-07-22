@@ -16,7 +16,7 @@
     <a href="https://discordapp.com/channels/111111111111111111/111111111111111111">Chat</a>
   </h3>
 
-<sub>Built with 🦀🕸 by <a href="https://rustwasm.iana.io/">The Rust and WebAssembly Working Group</a></sub>
+<sub>Built with 🦀🕸 by <a href="https://rustwasm.iana.io/">IANA SYSTEMS Rust and WebAssembly Working Group</a></sub>
 </div>
 
 The JavaScript's `console` object provides access to the browser's console.
