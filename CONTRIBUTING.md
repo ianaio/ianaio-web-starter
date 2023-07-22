@@ -233,7 +233,7 @@ is merged.
 Here is a checklist that all crate and API implementations in IanaIO Web Starter should
 fulfill:
 
-* [ ] The crate should be named `ianaio-web-starter-foobar`, located at `gloo/crates/foobar`,
+* [ ] The crate should be named `ianaio-web-starter-foobar`, located at `ianaio-web-starter/crates/foobar`,
   and re-exported from the umbrella IanaIO Web Starter crate like:
 
   ```rust
@@ -277,7 +277,7 @@ else would be a good fit? Reach out to us!
 
 Whenever we bump a `ianaio-web-starter_whatever` utility crate's version, make sure to make a
 corresponding version bump for every crate that transitively depends upon
-`ianaio-web-starter_whatever`. Crates that do not transitively depend on `gloo_whatever`
+`ianaio-web-starter_whatever`. Crates that do not transitively depend on `ianaio-web-starter_whatever`
 should not have their version bumped.
 
 For example, if we start with this dependency graph:
@@ -294,10 +294,10 @@ If we make a bug fix in `ianaio-web-starter_bar` and bump its version from 0.1.3
 then the cascading version bumps should result in this final dependency graph:
 
 ```
-- ianaio-web-starter @ 0.1.3           # `gloo` has deps updated, version bumped
-  - ianaio-web-starter_foo @ 0.1.2     # `gloo_foo` remains at 0.1.2 since no deps changed
-  - ianaio-web-starter_bar @ 0.1.4     # `gloo_bar` had bug fix -> bumped to 0.1.4
-  - ianaio-web-starter_qux @ 0.1.5     # `gloo_qux` has its dep on `gloo_bar` updated, version bumped
+- ianaio-web-starter @ 0.1.3           # `ianaio-web-starter` has deps updated, version bumped
+  - ianaio-web-starter_foo @ 0.1.2     # `ianaio-web-starter_foo` remains at 0.1.2 since no deps changed
+  - ianaio-web-starter_bar @ 0.1.4     # `ianaio-web-starter_bar` had bug fix -> bumped to 0.1.4
+  - ianaio-web-starter_qux @ 0.1.5     # `ianaio-web-starter_qux` has its dep on `ianaio-web-starter_bar` updated, version bumped
     - ianaio-web-starter_bar @ 0.1.4
 ```
 
