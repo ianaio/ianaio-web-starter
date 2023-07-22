@@ -1,0 +1,29 @@
+[package]
+name = "ianaio-web-starter-console"
+description = "IANA SYSTEMS crate for better working with browser's console"
+version = "0.0.1"
+authors = ["IANA SYSTEMS Rust and WebAssembly Working Group"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ianaio/ianaio-web-starter/tree/main/crates/console"
+homepage = "https://github.com/ianaio/ianaio-web-starter"
+documentation = "https://docs.ianaio/ianaio-web-starter-console/"
+categories = ["api-bindings", "development-tools::profiling", "wasm"]
+
+[dependencies]
+wasm-bindgen = "0.2.87"
+js-sys = "0.3.64"
+serde = { version = "1", features = ["derive"] }
+ianaio-web-starter-utils = { version = "0.1", path = "../utils", features = ["serde"] }
+[dependencies.web-sys]
+version = "0.3"
+features = [
+    "console",
+    "Document"
+]
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.37"
+ianaio-web-starter-timers = { version = "0.0.1", path = "../timers" }
+
