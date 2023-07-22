@@ -1,0 +1,87 @@
+[package]
+authors = ["IANA SYSTEMS Rust and WebAssembly Working Group"]
+description = "A webiste modular starter toolkit for Rust and WebAssembly"
+edition = "2021"
+license = "MIT/Apache-2.0"
+name = "ianaio-web-starter"
+readme = "README.md"
+version = "0.0.1"
+repository = "https://github.com/ianaio/ianaio-web-starter"
+homepage = "https://rustwasm.iana.io"
+documentation = "https://docs.iana.io/ianaio-starter-kit"
+categories = ["api-bindings", "wasm"]
+
+[dependencies]
+ianaio-web-starter-timers = { version = "0.2", path = "crates/timers", optional = true }
+ianaio-web-starter-events = { version = "0.1", path = "crates/events", optional = true }
+ianaio-web-starter-file = { version = "0.2", path = "crates/file", optional = true }
+ianaio-web-starter-dialogs = { version = "0.1", path = "crates/dialogs", optional = true }
+ianaio-web-starter-storage = { version = "0.2", path = "crates/storage", optional = true }
+ianaio-web-starter-render = { version = "0.1", path = "crates/render", optional = true }
+ianaio-web-starter-console = { version = "0.2", path = "crates/console", optional = true }
+ianaio-web-starter-utils = { version = "0.1", path = "crates/utils", optional = true }
+ianaio-web-starter-history = { version = "0.1", path = "crates/history", optional = true }
+ianaio-web-starter-worker = { version = "0.2", path = "crates/worker", optional = true }
+ianaio-web-starter-net = { version = "0.3", path = "crates/net", optional = true }
+
+[features]
+default = [
+    "timers",
+    "events",
+    "file",
+    "dialogs",
+    "storage",
+    "render",
+    "console",
+    "utils",
+    "history",
+    "worker",
+    "net",
+]
+futures = [
+    "timers",
+    "file",
+    "worker",
+    "ianaio-web-starter-timers/futures",
+    "ianaio-web-starter-file/futures",
+    "ianaio-web-starter-worker/futures"
+]
+timers = ["ianaio-web-starter-timers"]
+events = ["ianaio-web-starter-events"]
+file = ["ianaio-web-starter-file"]
+dialogs = ["ianaio-web-starter-dialogs"]
+storage = ["ianaio-web-starter-storage"]
+render = ["ianaio-web-starter-render"]
+console = ["ianaio-web-starter-console"]
+utils = ["ianaio-web-starter-utils"]
+history = ["ianaio-web-starter-history"]
+worker = ["ianaio-web-starter-worker"]
+net = ["ianaio-web-starter-net"]
+
+[workspace]
+members = [
+    "crates/timers",
+    "crates/events",
+    "crates/net",
+    "crates/file",
+    "crates/dialogs",
+    "crates/storage",
+    "crates/console",
+    "crates/utils",
+    "crates/history",
+    "crates/worker",
+    "crates/worker-macros",
+    "crates/net",
+
+    "examples/markdown",
+    "examples/clock",
+    "examples/prime",
+]
+
+# Passing arguments to the docsrs builder in order to properly document cfg's.
+# More information: https://docs.rs/about/builds#cross-compiling
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+rustc-args = ["--cfg", "docsrs"]
+
