@@ -9,14 +9,14 @@
   </p>
 
   <h3>
-    <a href="https://docs.rs/ianaio-web-starter-file">API Docs</a>
+    <a href="https://docs.iana.io/ianaio-web-starter-file">API Docs</a>
     <span> | </span>
-    <a href="https://github.com/rustwasm/ianaio-web-starter/blob/master/CONTRIBUTING.md">Contributing</a>
+    <a href="https://github.com/ianaio/ianaio-web-starter/blob/main/CONTRIBUTING.md">Contributing</a>
     <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
+    <a href="https://discordapp.com/channels/111111111111111111/1111111111111111111">Chat</a>
   </h3>
 
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
+  <sub>Built with 🦀🕸 by <a href="https://rustwasm.iana.io/">IANA SYSTEMS Rust and WebAssembly Working Group</a></sub>
 </div>
 
 
