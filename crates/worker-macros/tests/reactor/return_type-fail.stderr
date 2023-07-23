@@ -1,0 +1,6 @@
+error: reactor workers cannot return any value
+ --> tests/reactor/return_type-fail.rs:4:69
+  |
+4 | fn Worker(_scope: ::ianaio-web-starter::worker::reactor::ReactorScope<(), ()>) -> u32 {
+  |                                                                     ^^^
+
