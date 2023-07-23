@@ -1,0 +1,43 @@
+[package]
+name = "ianaio-web-starter-utils"
+version = "0.0.1"
+edition = "2021"
+description = "IANA SYSTEMS crate for common `web_sys` features"
+authors = ["IANA SYSTEMS Rust and WebAssembly Working Group"]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ianaio/ianaio-web-starter/tree/main/crates/utils"
+homepage = "https://github.com/ianaio/ianaio-web-starter"
+categories = ["api-bindings", "wasm"]
+
+
+[dependencies]
+wasm-bindgen = "0.2.87"
+js-sys = "0.3.64"
+serde =  { version = "1.0.174", optional = true }
+serde_json = {version = "1.0.1", optional = true }
+
+[dependencies.web-sys]
+version = "0.3.64"
+features = [
+    "Document",
+    "History",
+    "HtmlElement",
+    "Location",
+    "Window",
+    "HtmlHeadElement",
+    "Element",
+]
+
+[features]
+default = ["serde"]
+serde = ["dep:serde", "dep:serde_json"]
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.37"
+serde_derive = "1.0.174"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
