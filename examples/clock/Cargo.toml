@@ -1,0 +1,28 @@
+[package]
+name = "ianaio-example-clock"
+version = "0.0.1"
+authors = ["IANA SYSTEMS Rust and WebAssembly Working Group"]
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+ianaio-web-starter = { path = "../..", features = ["futures"] }
+wasm-bindgen = "0.2.87"
+wasm-bindgen-futures = "0.4.4"
+futures-util = "0.3.28"
+chrono = { version = "0.4.26", features = ["wasmbind"] }
+console_error_panic_hook = "0.1.6"
+
+[dependencies.web-sys]
+version = "0.3.64"
+features = [
+    "console",
+    "Window",
+    "Document",
+    "Element",
+    "Node",
+]
+
