@@ -37,7 +37,7 @@ features = [
 [dev-dependencies]
 futures_rs = { version = "0.3", package = "futures" }
 wasm-bindgen-test = "0.3.37"
-wasm-bindgen-futures = "0.4.25"
+wasm-bindgen-futures = "0.4.26"
 chrono = { version = "0.4.26", features = ["wasmbind"] }
 
 [dev-dependencies.web-sys]
