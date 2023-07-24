@@ -25,7 +25,7 @@ futures = ["futures-core", "futures-channel"]
 
 
 [dev-dependencies]
-wasm-bindgen-futures = "0.4.25"
+wasm-bindgen-futures = "0.4.26"
 wasm-bindgen-test = "0.3.37"
 futures-util = "0.3.28"
 
