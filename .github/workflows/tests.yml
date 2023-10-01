@@ -10,7 +10,7 @@ jobs:
     name: Native Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@main
         with:
           toolchain: stable
@@ -33,7 +33,7 @@ jobs:
     name: Browser Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@main
         with:
           toolchain: stable
@@ -76,7 +76,7 @@ jobs:
     name: Node Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@main
         with:
           toolchain: stable
@@ -116,7 +116,7 @@ jobs:
         # example: [ markdown, prime ]
         example: [ markdown ]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@main
         with:
           toolchain: stable
@@ -169,7 +169,7 @@ jobs:
           - 8081:8080
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@main
         with:
           toolchain: stable
